@@ -3,9 +3,9 @@ package views
 import (
 	"encoding/json"
 	"github.com/joegasewicz/gomek"
-	"github.com/joegasewicz/noticeboard/identity_api/models"
-	"github.com/joegasewicz/noticeboard/identity_api/schemas"
-	"github.com/joegasewicz/noticeboard/identity_api/utilities"
+	"github.com/joegasewicz/locksmith/models"
+	"github.com/joegasewicz/locksmith/schemas"
+	"github.com/joegasewicz/locksmith/utilities"
 	"io"
 	"log"
 	"net/http"

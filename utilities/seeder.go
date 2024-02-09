@@ -1,7 +1,7 @@
 package utilities
 
 import (
-	"github.com/joegasewicz/noticeboard/identity_api/models"
+	"github.com/joegasewicz/locksmith/models"
 	"log"
 )
 

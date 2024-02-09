@@ -11,16 +11,6 @@ type TokenClaims struct {
 }
 
 func CreateNewJWT(UserID uint) (string, error) {
-	//claims := TokenClaims{
-	//jwt.RegisteredClaims{
-	//	Issuer:    "noto.com",
-	//	Subject:   "authentication",
-	//	Audience:  nil,
-	//	ExpiresAt: jwt.NewNumericDate(time.Now().Add(7 * (24 * time.Hour))),
-	//	NotBefore: jwt.NewNumericDate(time.Now()),
-	//	IssuedAt:  jwt.NewNumericDate(time.Now()),
-	//},
-	//}
 	claims := jwt.MapClaims{
 		"user_id": UserID,
 		"iss":     "noto.com",
