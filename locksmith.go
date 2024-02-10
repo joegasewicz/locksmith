@@ -6,10 +6,17 @@ import (
 	"github.com/joegasewicz/locksmith/models"
 	"github.com/joegasewicz/locksmith/utilities"
 	"github.com/joegasewicz/locksmith/views"
+	"log"
 	"net/http"
 )
 
 func main() {
+	y := utilities.NewYaml()
+	y.Get("locksmith.yaml")
+	err := y.Do()
+	if err != nil {
+		log.Fatalln("error parsing locksmith.yaml")
+	}
 	config := utilities.Config
 	utilities.DB.AutoMigrate(
 		&models.Role{},
@@ -18,8 +25,8 @@ func main() {
 
 	// seed db
 	s := utilities.Seeder{}
-	s.CreateRoles()
-	s.CreateUser()
+	s.CreateRoles(&y.Yaml)
+	s.CreateUser(&y.Yaml)
 
 	var whiteList = [][]string{
 		{
