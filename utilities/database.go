@@ -8,6 +8,7 @@ import (
 
 func CreateDB() *gorm.DB {
 	dsn := Config.PostgresConfig.GetPostgresConnStr()
+	log.Println("DSN: ", dsn)
 	database, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalln("Database failed to connect", err)

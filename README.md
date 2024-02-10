@@ -39,6 +39,56 @@ docker pull bandnoticeboard/locksmith:v1.0.1
 
 Or select a version here - [bandnoticeboard/locksmith](https://hub.docker.com/r/bandnoticeboard/locksmith)
 
+### Docker Compose
+Example of running locksmith with Docker Compose.
+This example also include the required postgres database configuration.
+```
+  postgres_locksmith:
+    image: "postgres:latest"
+    ports:
+      - "5431:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=identity_db
+    volumes:
+      - ./db/identitydb_vol/:/var/lib/postgresql/data
+
+  locksmith:
+    image: "bandnoticeboard/locksmith:v1.0.1"
+    ports:
+      - "7001:7001"
+    env_file:
+      - ".env-dev"
+    depends_on:
+      - postgres_locksmith
+    restart: on-failure
+```
+
+### Environment Variables
+- `TOKEN_SECRET`
+- `PGDATABASE`
+- `PGUSER`
+- `PGPASSWORD` 
+- `PGPORT`
+- `PGHOST`
+
+Example `.env` file
+```text
+TOKEN_SECRET=wizard
+PGDATABASE=identity_db
+PGUSER=admin
+PGPASSWORD=admin
+PGPORT=5431
+PGHOST=host.docker.internal
+```
+
+### Endpoints
+- GET `http://127.0.0.1:7001/health`
+Response:
+```
+{"Health":"OK"}
+```
 ## Authors
 
 * **joegasewicz** - *Initial work* - [@joegasewicz](https://twitter.com/joegasewicz)
