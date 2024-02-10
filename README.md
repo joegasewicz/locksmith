@@ -34,7 +34,7 @@ users:
 ### Docker Image
 Pull down locksmith from the Docker registry 
 ```
-docker pull bandnoticeboard/locksmith:v1.0.1
+docker pull bandnoticeboard/locksmith:v1.0.2
 ```
 
 Or select a version here - [bandnoticeboard/locksmith](https://hub.docker.com/r/bandnoticeboard/locksmith)
@@ -55,7 +55,7 @@ This example also include the required postgres database configuration.
       - ./db/identitydb_vol/:/var/lib/postgresql/data
 
   locksmith:
-    image: "bandnoticeboard/locksmith:v1.0.1"
+    image: "bandnoticeboard/locksmith:v1.0.2"
     ports:
       - "7001:7001"
     env_file:
