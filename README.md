@@ -2,7 +2,7 @@
 Identity server
 
 ### Usages
-To run the locksmith locally, first run the docker-compose make cmd
+To run locksmith locally, first run the docker-compose make cmd
 ```
 make docker-compose
 ```
