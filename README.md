@@ -34,7 +34,7 @@ users:
 ### Docker Image
 Pull down locksmith from the Docker registry 
 ```
-docker pull bandnoticeboard/locksmith:v1.0.0
+docker pull bandnoticeboard/locksmith:v1.0.1
 ```
 
 Or select a version here - [bandnoticeboard/locksmith](https://hub.docker.com/r/bandnoticeboard/locksmith)
