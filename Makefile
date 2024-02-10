@@ -11,3 +11,6 @@ push:
 
 go_run_api:
 	go run api.go
+
+docker-compose:
+	docker compose -f docker-compose.local.yaml up
