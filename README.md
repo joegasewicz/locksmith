@@ -38,3 +38,14 @@ docker pull bandnoticeboard/locksmith:v1.0.1
 ```
 
 Or select a version here - [bandnoticeboard/locksmith](https://hub.docker.com/r/bandnoticeboard/locksmith)
+
+## Authors
+
+* **joegasewicz** - *Initial work* - [@joegasewicz](https://twitter.com/joegasewicz)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
