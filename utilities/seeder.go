@@ -7,28 +7,25 @@ import (
 
 type Seeder struct{}
 
-func (s *Seeder) CreateUser() {
-	var superRole models.Role
-	DB.First(&superRole, "name = ?", "super")
-	var authRole models.Role
-	DB.First(&authRole, "name = ?", "author")
-	hashPassword, err := Hash("wizard")
-	if err != nil {
-		log.Panic(err.Error())
-	}
-	users := []models.User{
-		{
-			Email:    "joegasewicz@gmail.com",
-			Username: "TestSuper",
+func (s *Seeder) CreateUser(y *yamlScheme) {
+	var users []models.User
+	for _, user := range y.Users {
+		hashPassword, err := Hash(user.Password)
+		if err != nil {
+			log.Panic(err.Error())
+		}
+		var role models.Role
+		result := DB.First(&role, "name = ?", user.Role)
+		if result.Error != nil {
+			log.Fatalf("Error: can not assign a role with name %s\n", user.Role)
+		}
+		u := models.User{
+			Username: user.Name,
+			Email:    user.Email,
 			Password: hashPassword,
-			RoleID:   superRole.ID,
-		},
-		{
-			Email:    "pymailio@gmail.com",
-			Username: "TestAuthor",
-			Password: hashPassword,
-			RoleID:   authRole.ID,
-		},
+			RoleID:   role.ID,
+		}
+		users = append(users, u)
 	}
 
 	userResult := DB.Create(&users)
@@ -38,17 +35,12 @@ func (s *Seeder) CreateUser() {
 
 }
 
-func (s *Seeder) CreateRoles() {
-	var superRole models.Role
-	superRoleResult := DB.First(&superRole, "name = ?", "super")
-	if superRoleResult.Error != nil {
-		// This means we have no roles on the db
-		roles := []models.Role{
-			{Name: "super"},
-			{Name: "author"},
-			{Name: "editor"},
+func (s *Seeder) CreateRoles(y *yamlScheme) {
+	for _, role := range y.Roles {
+		r := models.Role{
+			Name: role,
 		}
-		rolesResult := DB.Create(&roles)
+		rolesResult := DB.Create(&r)
 		if rolesResult.Error == nil {
 			log.Println("successfully seeded db with roles")
 		}

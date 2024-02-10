@@ -1,0 +1,20 @@
+version: 1
+roles:
+  - admin
+  - teacher
+  - student
+users:
+  - name: admin
+    role: admin
+    email: test1@gmail.com
+    password: admin
+
+  - name: teacher
+    role: teacher
+    email: test2@gmail.com
+    password: admin
+
+  - name: student
+    role: student
+    email: test3@gmail.com
+    password: admin
