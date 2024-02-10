@@ -5,7 +5,9 @@ services:
     image: "postgres:latest"
     ports:
       - "5431:5432"
-    env_file:
-      - ".env-dev"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=identity_db
     volumes:
       - ./dentitydb_vol/:/var/lib/postgresql/data

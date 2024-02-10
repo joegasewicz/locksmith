@@ -1,4 +1,4 @@
-NAME=locksmith:v1.0.1
+NAME=locksmith:v1.0.2
 
 build:
 	docker build --tag bandnoticeboard/$(NAME) .
