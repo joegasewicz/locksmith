@@ -4,7 +4,7 @@ Identity server
 This is a WIP & will be production ready in v1.0
 
 ### Admin Console
-![Admin Console](public/img/screenshot-1.png?raw=true "Admin Console")
+![Admin Console](public/img/screenshot-2.png?raw=true "Admin Console")
 
 ### Usages
 To run locksmith locally, first run the docker-compose make cmd
