@@ -1,0 +1,19 @@
+.navbar {
+  height: $navbar-height;
+  width: 100%;
+  background-color: $black-pearl;
+  color: $light-aqua-green;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 20px;
+  form {
+    margin: 0;
+  }
+  a {
+    color: $light-aqua-green;
+    &:active, &:hover {
+        color: $dull-green;
+    }
+  }
+}

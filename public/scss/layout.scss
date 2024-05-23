@@ -1,0 +1,24 @@
+.di-container {
+  height: 100%;
+  display: flex;
+  color: $light-aqua-green;
+  .di-inner {
+    width: 100%;
+
+    background-color: $baltic-sea;
+    .di-content {
+      table {
+        color: $light-aqua-green;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        color: $light-aqua-green;
+        font-weight: 200;
+      }
+      h1 {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+  }
+}
