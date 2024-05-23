@@ -1,4 +1,4 @@
-# Locksmith 🔐
+![Locksmith](public/img/locksmith-logo.png?raw=true "Locksmith")
 Identity server
 
 ### Usages
