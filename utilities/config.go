@@ -17,6 +17,7 @@ func NewConf() *AppConfig {
 			PGDatabase: "identity_db",
 			PGUser:     "admin",
 			PGPassword: "admin",
+			PGHostAddr: "host.docker.internal",
 		}}
 
 	pg_conf.Update(cfg.PostgresConfig)

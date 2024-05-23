@@ -1,0 +1,24 @@
+@import "~bootstrap";
+
+@import "variables.scss";
+@import "grid.scss";
+
+// resets
+@import "./resets";
+// Base
+@import "./layout.scss";
+// Partials
+@import "partials/form.scss";
+@import "partials/sidebar.scss";
+@import "partials/navbar.scss";
+// Routes
+@import "./routes/login.scss";
+@import "./routes/organization.scss";
+@import "./routes/create-organization.scss";
+@import "./routes/home.scss";
+@import "./routes/products.scss";
+@import "./routes/insights.scss";
+@import "./routes/insights-create.scss";
+@import "./routes/users.scss";
+@import "./routes/users-admins.scss";
+@import "./routes/users-recipients.scss";

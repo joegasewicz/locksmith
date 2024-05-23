@@ -1,0 +1,38 @@
+.sidebar {
+  background-color: $black-pearl;
+  padding: 1rem;
+  min-width: $side-bar-width;
+  height: 100vh;
+  color: $light-aqua-green;
+  a {
+    color: $light-aqua-green!important;
+  }
+  .text-bg-dark {
+    background-color: $black-pearl!important;
+  }
+  &__logo {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    svg {
+      width: 130px;
+      height: auto;
+    }
+  }
+  hr {
+    color: $aqua;
+  }
+  ul {
+    li {
+      .active {
+        border: 1px $light-aqua-green solid!important;
+        background-color: $light-aqua-green!important;
+        color: $black-pearl!important;
+      }
+    }
+  }
+  &__nested-ul {
+    margin-left: 29px;
+    list-style-type: none;
+  } // &__nested-ul
+}

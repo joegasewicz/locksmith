@@ -1,0 +1,19 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Locksmith - Identity Server</title>
+    {{ template "header" . }}
+</head>
+<body>
+    {{ template "navbar" . }}
+
+    <div class="main-content">
+        {{ template "content" . }}
+    </div>
+    {{ template "footer" . }}
+    {{ template "scripts" . }}
+</body>
+</html>
+{{ end }}

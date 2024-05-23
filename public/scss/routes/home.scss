@@ -1,0 +1,72 @@
+.home {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 60vH;
+    background-image: linear-gradient(to right, rgba(30, 39, 46, .8), rgba(30, 39, 46, .8)), url(/public/img/abstract-background-with-low-poly-design.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: $white;
+
+    &__block-logo {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      img {
+        margin-bottom: 30px;
+        width: 190px;
+        height: auto;
+      }
+    }
+
+    &__main-heading {
+      width: 50vW;
+      h1 {
+        color: $aqua!important;
+        font-weight: 100 !important;
+        font-size: 22px;
+      }
+    }
+    @media screen and (min-width: $breakpoint-large) {
+      height: 50vH;
+    }
+  } // .hero
+
+  .section-intel-insights {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      color: $aqua!important;
+      font-weight: 100 !important;
+      font-size: 33px;
+      margin-bottom: 50px;
+    }
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $aqua!important;
+      font-weight: 100 !important;
+      text-align: center;
+      h3 {
+        font-weight: 200 !important;
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+      img {
+          width: 50px;
+          height: auto;
+          margin-bottom: 30px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+}

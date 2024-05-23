@@ -1,0 +1,30 @@
+.di-form {
+  margin-top: 40px;
+  .card {
+    border: none;
+    .card-header {
+      background-color: $black-pearl;
+      color: $light-aqua-green;
+      border-bottom: 1px $dull-green solid;
+    }
+    .card-body {
+      background-color: $black-pearl;
+      color: $light-aqua-green;
+      padding: 28px;
+      form {
+        button {
+          margin-top: 33px;
+          display: block;
+          width: 100%;
+          border: 1px $aqua solid;
+          color: $aqua;
+          &:hover {
+            background-color: $aqua;
+            border: 1px $aqua solid;
+            color: $black-pearl;
+          }
+        }
+      }
+    }
+  }
+}

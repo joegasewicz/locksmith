@@ -1,6 +1,9 @@
 ![Locksmith](public/img/locksmith-logo.png?raw=true "Locksmith")
 Identity server
 
+### Admin Console
+![Admin Console](public/img/screenshot-1.png?raw=true "Admin Console")
+
 ### Usages
 To run locksmith locally, first run the docker-compose make cmd
 ```

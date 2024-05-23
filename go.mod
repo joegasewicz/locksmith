@@ -4,7 +4,7 @@ go 1.21.6
 
 require (
 	github.com/golang-jwt/jwt/v4 v4.5.0
-	github.com/joegasewicz/gomek v0.4.7
+	github.com/joegasewicz/gomek v0.4.8
 	github.com/joegasewicz/pg-conf v0.1.2
 	golang.org/x/crypto v0.19.0
 	gorm.io/driver/postgres v1.5.6
