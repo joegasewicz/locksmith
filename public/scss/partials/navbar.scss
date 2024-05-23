@@ -16,4 +16,10 @@
         color: $dull-green;
     }
   }
+  .navbar-brand {
+    img {
+      width: 120px;
+      height: auto;
+    }
+  }
 }
