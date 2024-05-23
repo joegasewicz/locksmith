@@ -1,3 +1,19 @@
 {{ define "navbar" }}
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/public/img/locksmith-logo.png" alt="">
+            </a>
+
+            {{ if eq .Page "Home" }}
+                <a href="/admin/login" class="btn btn-outline-info">Login</a>
+            {{ end }}
+            {{ if .authenticated }}
+                <form action="/admin/logout" method="POST">
+                    <button class="btn btn-outline-info" type="submit">Logout</button>
+                </form>
+            {{ end }}
+        </div>
+    </nav>
 
 {{ end }}

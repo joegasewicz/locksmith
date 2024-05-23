@@ -1,6 +1,8 @@
 ![Locksmith](public/img/locksmith-logo.png?raw=true "Locksmith")
 Identity server
 
+This is a WIP & will be production ready in v1.0
+
 ### Admin Console
 ![Admin Console](public/img/screenshot-1.png?raw=true "Admin Console")
 

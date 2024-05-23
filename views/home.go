@@ -19,6 +19,8 @@ func (h *Home) Delete(w http.ResponseWriter, r *http.Request, d *gomek.Data) {
 	panic("implement me")
 }
 
-func (h *Home) Get(w http.ResponseWriter, r *http.Request, data *gomek.Data) {
-
+func (h *Home) Get(w http.ResponseWriter, r *http.Request, d *gomek.Data) {
+	templateData := make(gomek.Data)
+	templateData["Page"] = "Home"
+	*d = templateData
 }
