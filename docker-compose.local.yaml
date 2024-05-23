@@ -10,4 +10,5 @@ services:
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=identity_db
     volumes:
-      - ./dentitydb_vol/:/var/lib/postgresql/data
+      - ./identitydb_vol/:/var/lib/postgresql/data
+
